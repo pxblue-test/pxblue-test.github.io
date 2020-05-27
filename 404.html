@@ -42,8 +42,7 @@
                     .replace(/&/g, '~and~') +
                 (l.search ? '&q=' + l.search.slice(1).replace(/&/g, '~and~') : '') +
                 l.hash;
-            // for SEO
-            history.pushState({ newURL: updatedURL }, l.pathname.slice(1), updatedURL);
+            l.replace(updatedURL);
         </script>
     </head>
     <body></body>
